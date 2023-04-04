@@ -254,7 +254,8 @@ class UpdateUserActivity : AppCompatActivity() {
             userDeleteCall.enqueue(object: Callback<Int> {
                 override fun onResponse(call: Call<Int>, response: Response<Int>) {
                     deleteStore(intent.getStringExtra("profile_id")!!)
-                    deleteImage(intent.getStringExtra("profile_id")!!)
+                    if(intent.getStringExtra("profile_id") != "profile"){
+                        deleteImage(intent.getStringExtra("profile_id")!!)}
                     Toast.makeText(this@UpdateUserActivity, "회원탈퇴하셨습니다.", Toast.LENGTH_LONG).show()
                     val intent = Intent(this@UpdateUserActivity, LoginActivity::class.java)
                     startActivity(intent)
