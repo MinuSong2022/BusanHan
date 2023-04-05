@@ -49,7 +49,7 @@ class BoardFragment : Fragment() {
         binding = FragmentBoardBinding.inflate(inflater, container, false)
         return binding.root
     }
-    // 새로운 생명주기, 이미지버튼을 클릭하면 글 작성 으로 넘어간다 .
+    // 새로운 생명주기, 이미지버튼을 클릭하면 글 작성 으로 넘어감 .
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
